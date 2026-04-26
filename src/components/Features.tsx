@@ -5,6 +5,8 @@ import {
   Shield, Layers
 } from 'lucide-react'
 
+import type { Variants } from 'framer-motion'
+
 const features = [
   {
     icon: Zap,
@@ -44,12 +46,12 @@ const features = [
   },
 ]
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' },
+    transition: { delay: i * 0.08, duration: 0.5, ease: [0.0, 0.0, 0.2, 1] },
   }),
 }
 
